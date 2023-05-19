@@ -1,6 +1,7 @@
 import './App.css'
 import { Route, Routes } from 'react-router'
 import Nav from './components/Nav'
+import Home from './pages/Home'
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
         <Nav />
       </header>
       <main>
-        <hi>Let's do this bitch</hi>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
       </main>
     </div>
   )
