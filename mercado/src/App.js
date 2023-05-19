@@ -1,10 +1,16 @@
 import './App.css'
 import { Route, Routes } from 'react-router'
+import Nav from './components/Nav'
 
 function App() {
   return (
     <div className="App">
-      <hi>Let's do this bitch</hi>
+      <header>
+        <Nav />
+      </header>
+      <main>
+        <hi>Let's do this bitch</hi>
+      </main>
     </div>
   )
 }
