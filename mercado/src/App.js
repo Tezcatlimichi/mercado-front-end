@@ -36,6 +36,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/services" element={<Services />} />
           <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/community/:id" element={<OneArticle />} />
         </Routes>
       </main>
     </div>
