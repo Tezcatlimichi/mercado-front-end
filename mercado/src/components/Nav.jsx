@@ -9,7 +9,7 @@ const Nav = ()=>{
         <Link className='link' to='/community'>Community</Link>
         <Link className='link' to='/about'>About</Link>
         <Link className='link' to='/art'>Art</Link>
-        <Link className='link' to='/food'>Food</Link>
+        <Link className='link' to='/foods'>Food</Link>
         <Link className='link' to='/services'>Services</Link>
 
       </div>
