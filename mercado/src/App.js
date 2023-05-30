@@ -37,6 +37,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/community/:id" element={<OneArticle />} />
+          <Route path="/art/:id" element={<PieceOfArt />} />
         </Routes>
       </main>
     </div>

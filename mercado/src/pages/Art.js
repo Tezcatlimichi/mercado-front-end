@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
 const Art = () => {
+  let navigate = useNavigate()
   const [artWork, setArtWork] = useState([])
 
   useEffect(() => {
@@ -17,11 +18,20 @@ const Art = () => {
     getArtWork()
   }, [])
 
+  const viewArt = (id) => {
+    navigate(`/art/${id}`)
+  }
+
   return (
     <div id="art-container">
       {artWork
         ? artWork.map((art) => (
-            <div>
+            <div
+              className="art-container"
+              onClick={() => {
+                viewArt(art.id)
+              }}
+            >
               <h2>Description: {art.description}</h2>
               <h2>Price: ${art.price}</h2>
               <img src={art.picture1} width="200" />
