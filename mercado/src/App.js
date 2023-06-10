@@ -39,6 +39,8 @@ function App() {
           <Route path="/community/:id" element={<OneArticle />} />
           <Route path="/art/:id" element={<PieceOfArt />} />
           <Route path="/services/:id" element={<OneService />} />
+          <Route path="/food/produce/:id" element={<OneProduce />} />
+          <Route path="/food/:id" element={<OneFoodItem />} />
         </Routes>
       </main>
     </div>
