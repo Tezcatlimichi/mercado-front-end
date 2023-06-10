@@ -20,7 +20,6 @@ useEffect(()=>{
     <div>
       <h1>{selectedArticle.description}</h1>
       <img src={selectedArticle.picture1} width="600" />
-      <h2>{selectedArticle.price}</h2>
     </div>
   )
 }
