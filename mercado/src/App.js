@@ -16,6 +16,8 @@ import OneFoodItem from './components/OneFoodItem'
 import OneProduce from './components/OneProduce'
 import OneService from './components/OneService'
 import PieceOfArt from './components/PieceOfArt'
+import OneMarket from './components/OneMarket'
+import Markets from './pages/Markets'
 import Profile from './components/Profile'
 
 function App() {
@@ -41,6 +43,7 @@ function App() {
           <Route path="/services/:id" element={<OneService />} />
           <Route path="/food/produce/:id" element={<OneProduce />} />
           <Route path="/food/:id" element={<OneFoodItem />} />
+          <Route path="/markets" element={<Markets />} />
         </Routes>
       </main>
     </div>
