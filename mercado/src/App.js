@@ -44,6 +44,7 @@ function App() {
           <Route path="/food/produce/:id" element={<OneProduce />} />
           <Route path="/food/:id" element={<OneFoodItem />} />
           <Route path="/markets" element={<Markets />} />
+          <Route path="/markets/:id" element={<OneMarket />} />
         </Routes>
       </main>
     </div>
