@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+  let navigate = useNavigate()
   const [articles, setArticles] = useState([])
   const [markets, setMarkets] = useState([])
   const [art, setArt] = useState([])
@@ -31,12 +32,32 @@ const Home = () => {
     getServices()
   }, [])
 
+  const viewArticle = (id) => {
+    navigate(`/community/${id}`)
+  }
+
+  const viewMarket = (id) => {
+    navigate(`/markets/${id}`)
+  }
+
+  const viewArt = (id) => {
+    navigate(`/art/${id}`)
+  }
+
+  const viewService = (id) => {
+    navigate(`/services/${id}`)
+  }
+
   return (
     <div>
       <div className="home-article-container">
         {articles
           ? articles.map((article) => (
-              <div>
+              <div
+                onClick={() => {
+                  viewArticle(article.id)
+                }}
+              >
                 <img src={article.picture1} width="300" />
               </div>
             ))
@@ -45,7 +66,11 @@ const Home = () => {
       <div className="home-market-container">
         {markets
           ? markets.map((market) => (
-              <div>
+              <div
+                onClick={() => {
+                  viewMarket(market.id)
+                }}
+              >
                 <img src={market.picture1} width="400" />
               </div>
             ))
@@ -54,7 +79,11 @@ const Home = () => {
       <div className="home-art-container">
         {art
           ? art.map((artPiece) => (
-              <div>
+              <div
+                onClick={() => {
+                  viewArt(artPiece.id)
+                }}
+              >
                 <img src={artPiece.picture1} width="500" />
               </div>
             ))
@@ -63,7 +92,11 @@ const Home = () => {
       <div className="home-services-container">
         {services
           ? services.map((service) => (
-              <div>
+              <div
+                onClick={() => {
+                  viewService(service.id)
+                }}
+              >
                 <img src={service.picture1} width="600" />
               </div>
             ))
