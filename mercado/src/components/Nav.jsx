@@ -11,6 +11,7 @@ const Nav = ()=>{
         <Link className='link' to='/art'>Art</Link>
         <Link className='link' to='/foods'>Food</Link>
         <Link className='link' to='/services'>Services</Link>
+        <Link className='link' to='/markets'>Markets</Link>
 
       </div>
     </div>
