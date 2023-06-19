@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.home-article-container {
+  background-color: orange;
+  width: 30%;
+  /* float: right; */
+  margin-left: 69%;
+
+}
+.home-market-container {
+  background-color:green;
+  display:flex;
+  
+}
+.home-content-container{
+  position:relative;
+  background-color:aqua;
+}
+.home-article-bigger{
+  background-color: black;
+}

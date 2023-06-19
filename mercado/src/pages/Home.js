@@ -47,37 +47,45 @@ const Home = () => {
   const viewService = (id) => {
     navigate(`/services/${id}`)
   }
-
+  const styles = {
+    margin: 'auto',
+    border: ' 5px solid black'
+  }
   return (
-    <div>
-      <div className="home-article-container">
-        {articles
-          ? articles.map((article) => (
-              <div
-                onClick={() => {
-                  viewArticle(article.id)
-                }}
-              >
-                <img src={article.picture1} width="300" />
-              </div>
-            ))
-          : null}
+    <div className="home-content-container">
+      <div home-article-bigger>
+        <div className="home-article-container">
+          {articles
+            ? articles.map((article) => (
+                <div
+                  style={styles}
+                  onClick={() => {
+                    viewArticle(article.id)
+                  }}
+                >
+                  <h2>{article.title}</h2>
+                  <img src={article.picture1} width="300" />
+                </div>
+              ))
+            : null}
+        </div>
       </div>
       <div className="home-market-container">
         {markets
           ? markets.map((market) => (
               <div
+                style={styles}
                 onClick={() => {
                   viewMarket(market.id)
                 }}
               >
-                <img src={market.picture1} width="400" />
+                <img src={market.picture1} width="300" />
               </div>
             ))
           : null}
       </div>
       <div className="home-art-container">
-        {art
+        {/* {art
           ? art.map((artPiece) => (
               <div
                 onClick={() => {
@@ -87,10 +95,10 @@ const Home = () => {
                 <img src={artPiece.picture1} width="500" />
               </div>
             ))
-          : null}
+          : null} */}
       </div>
       <div className="home-services-container">
-        {services
+        {/* {services
           ? services.map((service) => (
               <div
                 onClick={() => {
@@ -100,7 +108,7 @@ const Home = () => {
                 <img src={service.picture1} width="600" />
               </div>
             ))
-          : null}
+          : null} */}
       </div>
     </div>
   )
