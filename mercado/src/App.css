@@ -36,7 +36,16 @@
     transform: rotate(360deg);
   }
 }
-
+.home-content-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "main main  sidebar"
+  " main main  sidebar"
+  "main main  sidebar"
+  "footer footer footer";
+  gap: 10px ;
+}
 .home-article-container {
   background-color: orange;
   grid-area:sidebar;
@@ -47,17 +56,41 @@
   grid-area: footer;
 }
 .home-nav-container{
-  /* display:grid; */
+  display:grid;
   background-color:red;
   grid-area: main;
-}
-.home-content-container{
-  display:grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "main main  sidebar"
-  " main main  sidebar"
-  "main main  sidebar"
-  "footer footer footer";
-  background-color:aqua;
+  grid-template-areas: " services services produce"
+  " markets markets produce"
+  " events food art"
+  " events community community"
+}
+.home-services{
+  background-color: aqua;
+  grid-area: services;
+}
+.home-produce{
+  background-color: blue;
+  grid-area:produce;
+}
+.home-markets{
+  background-color: yellow;
+  grid-area: markets;
+}
+.home-food{
+  background-color:greenyellow;
+  grid-area: food;
+}
+.home-art{
+  background-color: pink;
+  grid-area: art;
+}
+.home-events{
+  background-color: purple;
+  grid-area: events;
+}
+.home-community{
+  background-color: orange;
+  grid-area: community;
 }

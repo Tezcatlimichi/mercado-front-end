@@ -27,7 +27,9 @@ const Home = () => {
   const viewMarket = (id) => {
     navigate(`/markets/${id}`)
   }
-
+  const borderOnly = {
+    border: '5px solid black'
+  }
   const styles = {
     margin: 'auto',
     border: ' 5px solid black'
@@ -66,13 +68,27 @@ const Home = () => {
           : null}
       </div>
       <div className="home-nav-container">
-        <div>Services</div>
-        <div>Produce</div>
-        <div>Markets</div>
-        <div>Food</div>
-        <div>Art</div>
-        <div>Events</div>
-        <div>Community</div>
+        <div style={borderOnly} className="home-services">
+          Services
+        </div>
+        <div style={borderOnly} className="home-produce">
+          Produce
+        </div>
+        <div style={borderOnly} className="home-markets">
+          Markets
+        </div>
+        <div style={borderOnly} className="home-food">
+          Food
+        </div>
+        <div style={borderOnly} className="home-art">
+          Art
+        </div>
+        <div style={borderOnly} className="home-events">
+          Events
+        </div>
+        <div style={borderOnly} className="home-community">
+          Community
+        </div>
       </div>
     </div>
   )
