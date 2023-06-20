@@ -6,8 +6,6 @@ const Home = () => {
   let navigate = useNavigate()
   const [articles, setArticles] = useState([])
   const [markets, setMarkets] = useState([])
-  const [art, setArt] = useState([])
-  const [services, setServices] = useState([])
 
   useEffect(() => {
     const getArticles = async () => {
@@ -20,16 +18,6 @@ const Home = () => {
       setMarkets(response.data)
     }
     getMarkets()
-    const getArt = async () => {
-      const response = await axios.get(`http://localhost:3001/art`)
-      setArt(response.data)
-    }
-    getArt()
-    const getServices = async () => {
-      const response = await axios.get(`http://localhost:3001/services`)
-      setServices(response.data)
-    }
-    getServices()
   }, [])
 
   const viewArticle = (id) => {
@@ -40,13 +28,6 @@ const Home = () => {
     navigate(`/markets/${id}`)
   }
 
-  const viewArt = (id) => {
-    navigate(`/art/${id}`)
-  }
-
-  const viewService = (id) => {
-    navigate(`/services/${id}`)
-  }
   const styles = {
     margin: 'auto',
     border: ' 5px solid black'
@@ -84,31 +65,14 @@ const Home = () => {
             ))
           : null}
       </div>
-      <div className="home-art-container">
-        {/* {art
-          ? art.map((artPiece) => (
-              <div
-                onClick={() => {
-                  viewArt(artPiece.id)
-                }}
-              >
-                <img src={artPiece.picture1} width="500" />
-              </div>
-            ))
-          : null} */}
-      </div>
-      <div className="home-services-container">
-        {/* {services
-          ? services.map((service) => (
-              <div
-                onClick={() => {
-                  viewService(service.id)
-                }}
-              >
-                <img src={service.picture1} width="600" />
-              </div>
-            ))
-          : null} */}
+      <div className="home-nav-container">
+        <div>Services</div>
+        <div>Produce</div>
+        <div>Markets</div>
+        <div>Food</div>
+        <div>Art</div>
+        <div>Events</div>
+        <div>Community</div>
       </div>
     </div>
   )
