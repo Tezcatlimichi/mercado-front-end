@@ -39,20 +39,25 @@
 
 .home-article-container {
   background-color: orange;
-  width: 30%;
-  /* float: right; */
-  margin-left: 69%;
-
+  grid-area:sidebar;
 }
 .home-market-container {
   background-color:green;
-  display:flex;
-  
+  display:flex; 
+  grid-area: footer;
+}
+.home-nav-container{
+  /* display:grid; */
+  background-color:red;
+  grid-area: main;
 }
 .home-content-container{
-  position:relative;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "main main  sidebar"
+  " main main  sidebar"
+  "main main  sidebar"
+  "footer footer footer";
   background-color:aqua;
-}
-.home-article-bigger{
-  background-color: black;
 }
